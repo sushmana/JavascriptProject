@@ -1,0 +1,114 @@
+.heading {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  font-family: monospace; 
+}
+
+body {
+  background-color: #333333;
+  /* background-color: #1a1a1a; Dark background */
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif; /* Modern font */
+}
+
+footer {
+  text-align: center;
+}
+
+.getInput {
+  text-align: center;
+  width: 100%;
+}
+
+.inputItem {
+  width: 400px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  align-content: center;
+  border: 2px solid seagreen;
+  color: white;
+  border-radius: 10px;
+  margin: 0 auto;
+  padding: 20px;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3); /* Slightly larger shadow */
+  transition: 0.3s;
+}
+
+#inputTime {
+  background-color: black;
+  color: aquamarine;
+}
+
+input[type="time"]::-webkit-calendar-picker-indicator {
+  filter: invert(1); /* Change the color of the icon */
+  /* You can also apply other styles such as size, position, etc. */
+}
+
+.dropdown {
+  flex-direction: column;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif; /* Modern font */
+  margin: 10px 5px;
+}
+
+.dropdown select {
+  appearance: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  padding: 10px;
+  border: 1px solid #333333;
+  border-radius: 5px;
+  background-color: black;
+  color: aquamarine;
+  cursor: pointer;
+  font-size: 16px;
+}
+
+.dropdown-content {
+  display: block;
+  position: absolute;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3); /* Slightly larger shadow */
+  z-index: 1;
+}
+
+.dropdown-content option {
+  padding: 10px;
+  border-bottom: 1px solid #333333; /* Slightly lighter border */
+  cursor: pointer;
+}
+
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+
+.countryContainer {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.card {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  flex-direction: column;
+  width: 300px;
+  margin-top: 20px;
+  margin-right: 20px;
+  background-color: #333333;
+  color: azure;
+  border: 5px solid seagreen;
+  border-radius: 10px;
+}
+
+.card-title{
+
+}
+
+.card-content{
+color: aquamarine
+}
