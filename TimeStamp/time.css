@@ -13,7 +13,8 @@ body {
 }
 
 footer {
-  text-align: center;
+  width:100%;
+  font-size:100px;
 }
 
 .getInput {
@@ -47,7 +48,6 @@ input[type="time"]::-webkit-calendar-picker-indicator {
 }
 
 .dropdown {
-  flex-direction: column;
   font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif; /* Modern font */
   margin: 10px 5px;
 }
@@ -57,7 +57,7 @@ input[type="time"]::-webkit-calendar-picker-indicator {
   -webkit-appearance: none;
   -moz-appearance: none;
   padding: 10px;
-  border: 1px solid #333333;
+  border: 1px solid;
   border-radius: 5px;
   background-color: black;
   color: aquamarine;
@@ -99,6 +99,7 @@ input[type="time"]::-webkit-calendar-picker-indicator {
   width: 300px;
   margin-top: 20px;
   margin-right: 20px;
+  padding: 36px 20px 36px 20px ;
   background-color: #333333;
   color: azure;
   border: 5px solid seagreen;
@@ -111,4 +112,30 @@ input[type="time"]::-webkit-calendar-picker-indicator {
 
 .card-content{
 color: aquamarine
+}
+
+.rate{
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+}
+
+.emoji {
+  cursor: pointer;
+}
+
+.pop {
+  animation: Pop 1s ease-in-out;
+}
+
+@keyframes Pop {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(2);
+  }
+  100% {
+    transform: scale(1);
+  }
 }

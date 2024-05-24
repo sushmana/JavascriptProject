@@ -350,6 +350,9 @@ var arr = [
   "Pacific/Apia",
   "Africa/Johannesburg",
 ];
+var arr2 = ["128530","128531","128522","128512","128525"];
+
+var clicked = false;
 
 const formatter = (timeZone) => {
   return d.toLocaleTimeString("en-US", {
@@ -430,6 +433,48 @@ function handleInputTime(e) {
     // Remove selected element from dropdown
     document.getElementById("dropdown").selectedIndex = 0;
   }
+
+  function populateRating(){
+    const rate = document.getElementById("rate");
+  
+    arr2.forEach((element, index) => {
+      const para = document.createElement("p");
+      para.innerHTML= "&#" + element + ";"; 
+      para.setAttribute("data-index", index); 
+      para.classList.add("emoji");
+      rate.appendChild(para);
+    });  
+  
+    const emojis = document.querySelectorAll(".emoji");
+    emojis.forEach(emoji => {
+      emoji.addEventListener("click", handleEmojiClick);
+    });
+  }
+  
+  function handleEmojiClick(event) {
+    if(clicked){return;}
+
+    const index = event.target.getAttribute("data-index");
+    console.log("Clicked emoji index:", Number(index) +1);
+ 
+    event.target.classList.add("pop"); 
+    setTimeout(() => {
+      event.target.classList.remove("pop"); 
+    }, 1000); 
+
+    const rating = document.getElementById("rating");
+    if (rating) {
+      rate = Number(index) + 1;
+      rating.insertAdjacentHTML("afterend", `<p>Rated: ${rate}</p>`);
+    } else {
+      console.error("Element with id 'rating' not found");
+    }
+    clicked = true;
+  }
+  
   
   populateDropdown();
+  document.addEventListener("DOMContentLoaded", function() {
+    populateRating();
+  });
   
